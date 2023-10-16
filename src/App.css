@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #fcfcfc;
+  background-color: #111111;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.navbar {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.footer {
+  font-size: 18px;
+  margin-inline: auto;
+  margin-top: 30px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+}
+
+.footer .links {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #00F0FF;
+}
+
+.footer .link {
+  margin-inline: 10px;
+}
+
+.footer .left {
+  margin-right: auto;
+}
+
+.footer .right {
+  margin-left: auto;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.Color10 {
+  color: #00F0FF;
+}
+
+.link {
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+.link:hover {
+  color:#a0a0a0
+}
+
+.BackColor10link {
+  text-decoration: none;
+  margin-left: 16px;
+  background-color: #00F0FF;
+  color:#111111;
+  padding-top: 12px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  border-radius: 100px;
+}
+
+.BackColor10link:hover {
+  background-color: #fcfcfc;
+  padding-top: 12px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  border-radius: 100px;
+}
+
+.PhotoSlide {
+  height: 100%;
+  width: 100%;
+  border-style: dashed;
+  display: flex;
+}
