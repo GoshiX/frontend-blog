@@ -99,3 +99,13 @@
   border-style: dashed;
   display: flex;
 }
+
+.Photo {
+  height: 100%;
+  width: 100%;
+  border-style: dashed;
+  display: flex;
+}
+
+.Photo .HoverOpacity:hover{opacity:0.60}
+.Photo .HoverOpacityOff:hover{opacity:1}
