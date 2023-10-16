@@ -1,15 +1,32 @@
-import img1 from "./testImg/img1.jpg"
-// import img2 from "./testImg/img2.jpg"
+import { useState } from 'react';
+import Photo from './Photo';
 
-const PhotoSlide = () => {
+const PhotoSlide = (props) => {
+  const images = props.img;
+  var cur = 0;
+  const [ImgNum, ImgNumState] = useState(images[0])
+
+  const Next = () => {
+    cur++;
+    cur %= images.length;
+    console.log(cur);
+    ImgNumState(images[cur]);
+  }
+
+  const Prev = () => {
+    cur--;
+    cur += images.length;
+    cur %= images.length;
+    console.log(cur);
+    ImgNumState(images[cur]);
+  }
+  
     return (
         <div className="PhotoSlide">
-          {/* <img src={img1} alt="can not find" style={{"maxHeight" : "100%", "maxWidth" : "100%", margin : "auto"}} /> */}
-          <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-            <div class="w3-modal-content w3-animate-zoom">
-              <img src={img1} alt="wf" />
-            </div>
+          <Photo img = {ImgNum}/>
+          <div className="arrows">
+            <div title="Previous" className="arrow prev" onClick={ Prev }></div>
+            <div title="Next" className="arrow next" onClick={ Next }></div>
           </div>
         </div>
       );

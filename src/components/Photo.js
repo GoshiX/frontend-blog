@@ -1,27 +1,47 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Photo = (props) => {
     const img = props.img;
 
-    const [image, imageState] = useState(""); 
+    const [modal, modalState] = useState("hidden")
 
-    function onClick(element) {
-        console.log("OK");
-        imageState(element.src);
-        // document.getElementById("img01").src = element.src;
-        // document.getElementById("modal01").style.display = "block";
+    function onClickShow() {
+        modalState("visible");
+    }
+    function onClickHide() {
+        modalState("hidden");
+    }
+
+    useEffect(() => {
+        document.addEventListener('keydown', detectKeyDown, true)
+    })
+
+    const detectKeyDown = (e) => {
+        if (e.key === "Escape") {
+            onClickHide();
+        }
     }
 
     return (
         <div className="Photo">
-            <div className="w3-container w3-third">
-                <img src={img} alt="can not find" style={{"maxHeight" : "100%", "maxWidth" : "100%", margin : "auto", cursor: "pointer"}} onClick={ onClick } className="HoverOpacity" />
-            </div>
-            <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-            <div class="w3-modal-content w3-animate-zoom">
-                <img src={image} alt="hz" style={{ "width": "100%" }} />
-            </div>
-            </div>
+            <div style={{
+                background: 'RGBA(0,0,0,.5) url(' + img + ') no-repeat center',
+                backgroundSize: 'contain',
+                width: '100%',
+                height: '100%',
+                position: 'fixed',
+                zIndex: '10000',
+                top: '0',
+                left: '0',
+                cursor: 'pointer',
+                visibility: modal
+            }}
+            onClick={onClickHide}
+            ></div>
+            <img src={img} alt="can not find" 
+            style={{"maxHeight" : "100%", "maxWidth" : "100%", margin : "auto", cursor: "pointer"}} 
+            onClick={ onClickShow } 
+            className="HoverOpacity" />
         </div>
       );
 }

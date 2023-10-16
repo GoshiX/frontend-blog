@@ -96,16 +96,51 @@
 .PhotoSlide {
   height: 100%;
   width: 100%;
-  border-style: dashed;
   display: flex;
+  position: relative;
 }
 
 .Photo {
   height: 100%;
   width: 100%;
-  border-style: dashed;
   display: flex;
 }
 
-.Photo .HoverOpacity:hover{opacity:0.60}
-.Photo .HoverOpacityOff:hover{opacity:1}
+.arrows{
+  width: 70px;
+  height: 50px;
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+  background: transparent;
+}
+
+.arrow:hover {
+  border-color: #00F0FF;
+  border-radius: 4px;
+  border-width: 3px;
+}
+
+.arrow {
+  background: transparent;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-color: #fff;
+  border-width: 2px;
+  border-top: solid;
+  border-left: solid;
+}
+
+.next {
+  transform: rotate(135deg);
+  position: absolute;
+  right:0;
+}
+
+.prev {
+  transform: rotate(-45deg);
+  position: absolute;
+  left:0;
+}
