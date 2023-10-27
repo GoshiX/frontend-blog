@@ -31,10 +31,11 @@
   flex-direction: column;
   align-items: center;
   max-width: 1440px;
+  /* border-style: solid; */
 }
 
 .footer .links {
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -55,8 +56,9 @@
 
 .content {
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 20px auto;
   padding: 20px;
+  /* border-style: solid; */
 }
 
 .Color10 {
@@ -143,4 +145,31 @@
   transform: rotate(-45deg);
   position: absolute;
   left:0;
+}
+
+.title {
+  border-width: 2px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.title .text {
+  color: #ffffff;
+  font-size: 45px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.title .tag {
+  text-decoration: none;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: #333333;
+  color:#ffffff;
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  border-radius: 100px;
 }

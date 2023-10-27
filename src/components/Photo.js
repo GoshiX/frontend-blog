@@ -25,7 +25,10 @@ const Photo = (props) => {
     return (
         <div className="Photo">
             <div style={{
-                background: 'RGBA(0,0,0,.5) url(' + img + ') no-repeat center',
+                backgroundImage: ' url(' + img + ')',
+                backgroundColor: 'RGBA(0,0,0,.5)',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
                 backgroundSize: 'contain',
                 width: '100%',
                 height: '100%',
