@@ -1,28 +1,35 @@
+//libs
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 // components
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// import Navbar from './components/Navbar';
+// import Footer from './components/Footer';
 // import PhotoSlide from './components/PhotoSlide';
 // import Photo from './components/Photo';
-import Title from './components/Title';
+// import Title from './components/Title';
+// import PicTextBlock from './components/PicTextBlock';
+// import Text from './components/Text';
+
 //css
 import './App.css';
 
-//tmp
+//tmp_pics
 // import img1 from "./components/testImg/img1.jpg"
 // import img2 from "./components/testImg/img2.jpg"
 // import img3 from "./components/testImg/img3.jpg"
 
+//pages
+import Resume from './pages/Resume';
+import MainPage from './pages/MainPage';
 
 function App() {
   return (
-    <div className="App">  
-      <Navbar /> 
-      <div className='content'>
-        <Title tags={["lol", "kek"]} data="Резюме" />
-      </div>
-      <Footer />
-      
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<MainPage />} />
+        <Route exact path='/resume' element={<Resume />} />
+      </Routes>
+    </Router>
   );
 }
 

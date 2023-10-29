@@ -37,12 +37,18 @@ const Photo = (props) => {
                 top: '0',
                 left: '0',
                 cursor: 'pointer',
-                visibility: modal
+                visibility: modal,
             }}
             onClick={onClickHide}
             ></div>
             <img src={img} alt="can not find" 
-            style={{"maxHeight" : "100%", "maxWidth" : "100%", margin : "auto", cursor: "pointer"}} 
+            style={{
+                "maxHeight" : "100%", 
+                "maxWidth" : "100%", 
+                margin : "auto", 
+                cursor: "pointer",
+                "borderRadius": "inherit",
+            }} 
             onClick={ onClickShow } 
             className="HoverOpacity" />
         </div>

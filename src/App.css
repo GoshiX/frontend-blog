@@ -35,7 +35,7 @@
 }
 
 .footer .links {
-  padding: 15px;
+  padding-block: 15px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -43,15 +43,18 @@
 }
 
 .footer .link {
-  margin-inline: 10px;
+  /* margin-inline: 10px; */
+  width: 40px;
 }
 
 .footer .left {
   margin-right: auto;
+  padding-right:15px;
 }
 
 .footer .right {
   margin-left: auto;
+  padding-left:15px;
 }
 
 .content {
@@ -100,12 +103,15 @@
   width: 100%;
   display: flex;
   position: relative;
+  border-radius: inherit;
+  background-color: #444444;
 }
 
 .Photo {
   height: 100%;
   width: 100%;
   display: flex;
+  border-radius: inherit;
 }
 
 .arrows{
@@ -172,4 +178,19 @@
   padding-bottom: 8px;
   padding-left: 24px;
   border-radius: 100px;
+}
+
+.Text {
+  background-color: #444444;
+  border-radius: 10px;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.BlockPic {
+  align-items: center;
+  /* margin-inline: 20px; */
+  margin-bottom: 50px;
+  background-color: #444444;
+  border-radius: 10px;
 }

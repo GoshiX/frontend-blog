@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
     return ( 
         <nav className="navbar">
-            <a href = "/" style={{"textDecoration" : "none"}}>
+            <Link to = "/" style={{"textDecoration" : "none"}}>
                 My blog
-            </a>
+            </Link>
             <div className="links">
                 {/* <a href="/" className="link">Home</a>
                 <a href = "/" className="BackColor10link" >New blog</a> */}
