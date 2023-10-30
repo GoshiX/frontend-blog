@@ -7,7 +7,7 @@ const PicTextBlock = (props) => {
 
   const text = [];
   for (let i = 0; i < data.length; i++) {
-    text.push(<Text padding="8px" key={i} data={data[i]} />)
+    text.push(<Text padding="8px" key={i} data={[data[i]]} />)
   }
 
     return ( 

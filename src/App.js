@@ -19,8 +19,9 @@ import './App.css';
 // import img3 from "./components/testImg/img3.jpg"
 
 //pages
-import Resume from './pages/Resume';
-import MainPage from './pages/MainPage';
+import Resume from './pages/Resume/Resume';
+import MainPage from './pages/MainPage/MainPage';
+import BlockInfo from './pages/BlockInfo/BlockInfo';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<MainPage />} />
         <Route exact path='/resume' element={<Resume />} />
+        <Route exact path='/block_info' element={<BlockInfo />} />
       </Routes>
     </Router>
   );

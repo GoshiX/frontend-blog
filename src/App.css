@@ -112,6 +112,7 @@
   width: 100%;
   display: flex;
   border-radius: inherit;
+  background-color: transparent;
 }
 
 .arrows{
@@ -185,12 +186,11 @@
   border-radius: 10px;
   width: fit-content;
   margin-inline: auto;
+  white-space: pre-line;
 }
 
 .BlockPic {
   align-items: center;
-  /* margin-inline: 20px; */
-  margin-bottom: 50px;
   background-color: #444444;
   border-radius: 10px;
 }
