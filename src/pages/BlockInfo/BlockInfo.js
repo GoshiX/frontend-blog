@@ -64,6 +64,7 @@ const BlockInfo = () => {
                 "Add blocks for snabdart picture proportions",
                 "404 page",
                 "Intro animation CSS",
+                "Bigger social links (mobile)",
             ]}/>
         </div>
     );
